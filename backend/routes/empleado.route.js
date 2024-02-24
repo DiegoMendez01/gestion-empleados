@@ -9,10 +9,13 @@ const empleadoCtrl = require('../controllers/empleado.controller');
 
 /**
  * Manejador de ruta para la ruta raiz ("/").
- * Este manejador responderá con un mensaje JSON indicando que la API REST está funcionando.
+ * Este manejador respondera con un mensaje JSON indicando que la API REST esta funcionando.
  */
 router.get('/', empleadoCtrl.getEmpleados);
 router.post('/', empleadoCtrl.createEmpleados);
+router.get('/:id', empleadoCtrl.getEmpleado);
+router.put('/:id', empleadoCtrl.editEmpleado);
+router.delete('/:id', empleadoCtrl.deleteEmpleado);
 
 // Exportamos el router para poder utilizarlo en otros archivos
 module.exports = router;
