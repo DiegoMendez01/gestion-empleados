@@ -15,3 +15,9 @@ empleadoCtrl.getEmpleados = async (req, res) => {
     const empleados = await Empleado.find();
     res.json(empleados);
 }
+
+//Obtener un empleado
+empleadoCtrl.getEmpleado = async (req, res) => {
+    const empleado = await Empleado.findById(req.params.id);
+    res.json(empleado);
+}
