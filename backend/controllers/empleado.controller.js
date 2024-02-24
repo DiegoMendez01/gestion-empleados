@@ -10,6 +10,14 @@ const empleadoCtrl = {};
  * Definir metodos
  */
 
+// Crear empleados
+
+empleadoCtrl.createEmpleados = async (req, res) => {
+    const empleado = new Empleado(req.body);
+    await empleado.save();
+    res.json({status: 'Empleado guardado'});
+}
+
 //Obtener los empleados
 empleadoCtrl.getEmpleados = async (req, res) => {
     const empleados = await Empleado.find();
