@@ -13,7 +13,7 @@ app.use(express.json()); // metodo que ayuda a convertir el codigo para que el s
 app.use(cors({origin: 'http://localhost:4200'})); // metodo para comunicar con el cliente
 
 // rutas de nuestro servidor
-//app.use('/api/empleados',require('./routes/empleado.routes'));
+app.use('/api/empleados',require('./routes/empleado.route'));
 
 // Iniciando el servidor
 app.listen(app.get('port'), () => {// esta es una mejor manera de configurar el puerto
