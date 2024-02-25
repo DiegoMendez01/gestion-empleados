@@ -1,4 +1,4 @@
-export class Empleados {
+export class Empleado {
     constructor(_id = "", name = "", position = "", office = "", salary = 0){
         this._id = _id,
         this.name = name,
